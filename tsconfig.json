@@ -12,7 +12,8 @@
       "@entities/*": ["src/entities/*"],
       "@app/*": ["src/app/*"],
       "@page/*": ["src/page/*"],
-      "@shared/*": ["src/shared/*"]
+      "@shared/*": ["src/shared/*"],
+      "@widgets/*": ["src/widgets/*"]
     },
   },
   "ts-node": {"esm": true}, 

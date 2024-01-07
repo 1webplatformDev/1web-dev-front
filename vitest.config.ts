@@ -10,6 +10,7 @@ export default defineConfig({
       '@page': path.resolve(__dirname, './src/page'),
       '@entities': path.resolve(__dirname, './src/entities'),
       '@shared': path.resolve(__dirname, './src/shared'),
+      '@widgets': path.resolve(__dirname, './src/widgets')
     },
   }
 })
