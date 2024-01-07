@@ -1,2 +1,2 @@
 // публичный api
-export { PageType } from "./types/PageType";
+export { PageType } from "@shared/types/PageType";

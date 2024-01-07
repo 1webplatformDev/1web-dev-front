@@ -7,14 +7,15 @@
     "sourceMap": true,
     "outDir": "dist",
     "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@entities/*": ["src/entities/*"],
+      "@app/*": ["src/app/*"],
+      "@page/*": ["src/page/*"],
+      "@shared/*": ["src/shared/*"]
+    },
   },
-  "ts-node": {
-    "esm": true,
-  }, 
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules", 
-  ]
+  "ts-node": {"esm": true}, 
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }

@@ -1,6 +1,6 @@
-import type { PageType } from "src/shared";  
+import type { PageType } from "@shared/index";  
 
-const SqlGenerator = (): PageType => {
+const SqlGeneratorPage = (): PageType => {
     
     function render() {
         return `<div>Sql Page</div>`;
@@ -9,4 +9,4 @@ const SqlGenerator = (): PageType => {
     return { render }
 };
 
-export { SqlGenerator };
+export { SqlGeneratorPage };

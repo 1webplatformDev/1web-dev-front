@@ -1,2 +1,3 @@
-export { HomePage } from "./Home/index"
-export { SqlGenerator } from "./SqlGenerator/index"
+export { HomePage } from "@page/Home"
+export { SqlGeneratorPage } from "@page/SqlGenerator"
+export { page404Page } from "@/page/404"

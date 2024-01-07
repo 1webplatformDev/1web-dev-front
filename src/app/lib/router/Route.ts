@@ -1,4 +1,4 @@
-import { PageType } from "src/shared";
+import { PageType } from "@shared/index";
 
 export class Route {
     public readonly path: string;
