@@ -1,4 +1,5 @@
-import { Route } from "./Route";
+import { page404Page } from "@page/index";
+import { Route } from "@app/lib/router/Route";
 
 export class Router {
     routes: Route[];
@@ -41,11 +42,10 @@ export class Router {
 
     async loadRoute() {
         const route = this.routes.find(r => r.path === location.pathname);
-        if(route) {
+        if (route) {
             document.querySelector('#app').innerHTML = await route.page.render();
-        }else {
-            // TODO требуется доработка с выводом 404 ошибки
-            console.error("требуется доработка с выводом 404");
+        } else { // страница не найдено поэтому 404
+            document.querySelector("#app").innerHTML =  await page404Page().render();
         }
     }
 }
