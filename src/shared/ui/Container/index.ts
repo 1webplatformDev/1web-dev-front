@@ -1,0 +1,1 @@
+export { ContainerComponent } from "@shared/ui/Container/ui/ContainerComponent"

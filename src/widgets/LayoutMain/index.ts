@@ -1,7 +1,7 @@
 import { NavComponent } from "@shared/ui/Nav/index"
 import { ComponentType, PageType } from "@shared/types/index"
 import { listItemNav } from "@widgets/LayoutMain/const/index";
-import { ContainerComponent } from "@/shared/ui/Container/ui/ContainerComponent";
+import { ContainerComponent } from "@/shared/ui/Container/index";
 
 export class LayoutMain implements ComponentType {
     page: PageType
