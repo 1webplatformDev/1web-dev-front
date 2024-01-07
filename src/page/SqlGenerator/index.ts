@@ -1,4 +1,4 @@
-import type { PageType } from "@shared/index";  
+import type { PageType } from "@shared/types/index";  
 
 const SqlGeneratorPage = (): PageType => {
     

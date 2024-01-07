@@ -1,4 +1,4 @@
-import { PageType } from "@shared/index";
+import { PageType } from "@shared/types/index";
 
 const page404Page = (): PageType => {
     

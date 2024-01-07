@@ -1,4 +1,4 @@
-import { page404Page } from "@page/index";
+import { page404Page } from "@page/404/index";
 import { Route } from "@app/lib/router/Route";
 
 export class Router {

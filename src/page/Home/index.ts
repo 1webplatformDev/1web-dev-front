@@ -1,4 +1,4 @@
-import type { PageType } from "@shared/index";  
+import { PageType } from "@shared/types/index";
 
 const HomePage = (): PageType => {
     
