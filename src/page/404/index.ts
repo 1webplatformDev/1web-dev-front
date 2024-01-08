@@ -1,14 +1,13 @@
 import { PageType } from "@shared/types/index";
 
-const page404Page = (): PageType => {
+export class Page404 implements PageType {
+    name: string;
     
-    function render() {
+    constructor() {
+        this.name = "Page404";
+    }
+    
+    render() {
         return `<div>Страница не найдена!</div>`;
     }
-
-    return { render }
-}
-
-export {
-    page404Page
 }

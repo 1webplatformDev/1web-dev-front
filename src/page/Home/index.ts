@@ -1,11 +1,13 @@
 import { PageType } from "@shared/types/index";
 
-const HomePage = (): PageType => {
-    
-    function render() {
-        return `<div>Home Page</div>`;
-    }
-    return { render }
-};
+export class HomePage implements PageType {
+    name: string;
 
-export { HomePage };
+    constructor() {
+        this.name = "HomePage";
+    }
+
+    render() {
+        return `<div>Home Page</div>`; 
+    }
+}

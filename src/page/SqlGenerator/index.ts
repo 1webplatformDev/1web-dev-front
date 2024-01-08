@@ -1,12 +1,13 @@
 import type { PageType } from "@shared/types/index";  
 
-const SqlGeneratorPage = (): PageType => {
+export class SqlGeneratorPage implements PageType {
+    name: string;
     
-    function render() {
+    constructor() {
+        this.name = "SqlGeneratorPage";
+    }
+
+    render() {
         return `<div>Sql Page</div>`;
     }
-    
-    return { render }
-};
-
-export { SqlGeneratorPage };
+}
