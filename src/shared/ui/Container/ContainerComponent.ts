@@ -1,5 +1,5 @@
 import { ComponentType } from "@shared/types/index"
-import "@shared/ui/Container/assest/container.css"
+import "@shared/ui/Container/container.css"
 
 export class ContainerComponent implements ComponentType {
     name: string;

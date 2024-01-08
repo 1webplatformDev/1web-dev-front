@@ -1,1 +1,1 @@
-export { ContainerComponent } from "@shared/ui/Container/ui/ContainerComponent"
+export { ContainerComponent } from "@/shared/ui/Container/ContainerComponent"

@@ -1,6 +1,6 @@
 import { NavType } from "@shared/ui/Nav/types/NavType";
 import { NavItemType } from "@shared/ui/Nav/types/NavItemType";
-import "@/shared/ui/Nav/assest/nav.css";
+import "@/shared/ui/Nav/nav.css";
 
 export class NavComponent implements NavType {  
     name: string;
