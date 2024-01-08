@@ -1,25 +1,22 @@
-import { NavType } from "@shared/ui/Nav/types/NavType";
-import { NavItemType } from "@shared/ui/Nav/types/NavItemType";
+import { NavType } from "@/shared/ui/Nav/NavType";
+import { LinkType } from "@/shared/ui/Link/LinkType";
 import "@/shared/ui/Nav/nav.css";
+import { LinkComponent } from "../Link/LinkComponent";
 
 export class NavComponent implements NavType {  
     name: string;
-    navItemType: NavItemType[]
+    linkType: LinkType[]
 
-    constructor (navItemType: NavItemType[]){
-        this.navItemType = navItemType;
+    constructor (linkType: LinkType[]){
+        this.linkType = linkType;
         this.name = "NavComponent";
     }
 
     render() {
         const nav = document.createElement("nav");
         nav.classList.add("nav");
-        for (const navItemType of this.navItemType) {
-            const a = document.createElement("a");
-            a.setAttribute("href", navItemType.href);
-            a.classList.add("nav-link");
-            a.innerText = navItemType.text;
-            nav.append(a);
+        for (const linkType of this.linkType) {
+            nav.innerHTML += new LinkComponent(linkType).render();
         }
         return nav.outerHTML;
     }

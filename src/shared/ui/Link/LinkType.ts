@@ -1,4 +1,4 @@
-export interface NavItemType { 
+export interface LinkType { 
     href: string;
     text: string; 
 }

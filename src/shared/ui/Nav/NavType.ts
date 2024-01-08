@@ -1,6 +1,6 @@
 import { ComponentType } from "@shared/types/ComponentType"
-import { NavItemType } from "@/shared/ui/Nav/types/NavItemType"
+import { LinkType } from "@/shared/ui/Link/LinkType"
 
 export interface NavType extends ComponentType { 
-    navItemType: NavItemType[]
+    linkType: LinkType[]
 }
