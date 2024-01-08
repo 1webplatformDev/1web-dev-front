@@ -4,6 +4,7 @@ import { listItemNav } from "@widgets/LayoutMain/const/index";
 import { ContainerComponent } from "@/shared/ui/Container/index";
 import { LayoutMainType } from "@widgets/LayoutMain/types/LayoutMainType";
 import "@widgets/LayoutMain/layoutMain.css";
+import { SidebarComponent } from "@/shared/ui/Sidebar/SidebarComponent";
 
 export class LayoutMainComponent implements LayoutMainType {
     name: string;
@@ -24,8 +25,11 @@ export class LayoutMainComponent implements LayoutMainType {
         return `${header.outerHTML}${main.outerHTML}`;
     }
 
-    public renderSlot(page: PageType){
-        return new ContainerComponent(page).render();
+    public renderSlot(page: PageType) {
+       const containerComponent =  new ContainerComponent(page, "container_main");
+       const sidebar = new SidebarComponent();
+       return containerComponent.render(sidebar.render());
     }
 }
+
 export type { LayoutMainType } from "@widgets/LayoutMain/types/LayoutMainType"
