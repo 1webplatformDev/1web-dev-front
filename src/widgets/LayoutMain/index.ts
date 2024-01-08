@@ -1,16 +1,17 @@
 import { NavComponent } from "@shared/ui/Nav/index"
-import { ComponentType, PageType } from "@shared/types/index"
+import { PageType } from "@shared/types/index"
 import { listItemNav } from "@widgets/LayoutMain/const/index";
 import { ContainerComponent } from "@/shared/ui/Container/index";
+import { LayoutMainType } from "./types/LayoutMainType";
 
-export class LayoutMain implements ComponentType {
-    page: PageType
+export class LayoutMainComponent implements LayoutMainType {
+    name: string;
     
-    constructor(page: PageType){
-        this.page = page;
+    constructor(){
+        this.name = "LayoutMainComponent";
     }
 
-    render() {
+    render(page: PageType) {
         const header = document.createElement("header");
         header.classList.add("header");
         const nav = new NavComponent(listItemNav);
@@ -18,7 +19,12 @@ export class LayoutMain implements ComponentType {
         header.innerHTML = containerNav;
 
         const main = document.createElement("main");
-        main.innerHTML = new ContainerComponent(this.page).render();
+        main.innerHTML = this.renderSlot(page);
         return `${header.outerHTML}${main.outerHTML}`;
     }
+
+    public renderSlot(page: PageType){
+        return new ContainerComponent(page).render();
+    }
 }
+export type { LayoutMainType } from "@widgets/LayoutMain/types/LayoutMainType"
