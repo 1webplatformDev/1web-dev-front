@@ -4,6 +4,7 @@ import { Route } from "@app/lib/router/Route";
 export class Router {
     routes: Route[];
     activeLayoutComponent: string;
+    activeElementLink: HTMLElement;
 
     constructor(routes: any[]) {
         this.routes = routes;
@@ -46,14 +47,29 @@ export class Router {
         if (!route) {
             // todo нет дефолтного LayoutComponent поэтому пока что в #app
             document.querySelector("#app").innerHTML = await new Page404().render();
+            this.updateLinkActive();
+            return;
+        }
+ 
+        
+        if (this.activeLayoutComponent === route.layoutComponent.name) {
+            document.querySelector("main").innerHTML = route.layoutComponent.renderSlot(route.page);
+            this.updateLinkActive();
             return;
         }
 
-        if (this.activeLayoutComponent === route.layoutComponent.name) {
-            document.querySelector("main").innerHTML = route.layoutComponent.renderSlot(route.page);
-            return;
-        }
         this.activeLayoutComponent = route.layoutComponent.name;
         document.querySelector('#app').innerHTML = route.layoutComponent.render(route.page);
+        this.updateLinkActive();
     }
+
+    updateLinkActive(){
+        if(this.activeElementLink) {
+            this.activeElementLink.classList.remove("active");
+        }
+        const activeLink = document.querySelector(`a[href='${location.pathname}']`) as HTMLElement;
+        activeLink?.classList.add("active")
+        this.activeElementLink = activeLink;
+    }
+
 }
