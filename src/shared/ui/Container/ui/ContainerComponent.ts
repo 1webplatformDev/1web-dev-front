@@ -2,9 +2,11 @@ import { ComponentType } from "@shared/types/index"
 import "@shared/ui/Container/assest/container.css"
 
 export class ContainerComponent implements ComponentType {
+    name: string;
     component: ComponentType;
 
     constructor(component: ComponentType){
+        this.name = "ContainerComponent";
         this.component = component;
     }
 

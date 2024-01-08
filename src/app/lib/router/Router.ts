@@ -1,15 +1,16 @@
-import { page404Page } from "@page/404/index";
+import { Page404 } from "@page/404/index";
 import { Route } from "@app/lib/router/Route";
 
 export class Router {
     routes: Route[];
+    activeLayoutComponent: string;
 
     constructor(routes: any[]) {
         this.routes = routes;
         this.init();
     }
     
-    init(){
+    init() {
         window.addEventListener('click', (event: MouseEvent) => {
             const target = event.target as HTMLElement;
             
@@ -42,10 +43,17 @@ export class Router {
 
     async loadRoute() {
         const route = this.routes.find(r => r.path === location.pathname);
-        if (route) {
-            document.querySelector('#app').innerHTML = await route.page.render();
-        } else { // страница не найдено поэтому 404
-            document.querySelector("#app").innerHTML =  await page404Page().render();
+        if (!route) {
+            // todo нет дефолтного LayoutComponent поэтому пока что в #app
+            document.querySelector("#app").innerHTML = await new Page404().render();
+            return;
         }
+
+        if (this.activeLayoutComponent === route.layoutComponent.name) {
+            document.querySelector("main").innerHTML = route.layoutComponent.renderSlot(route.page);
+            return;
+        }
+        this.activeLayoutComponent = route.layoutComponent.name;
+        document.querySelector('#app').innerHTML = route.layoutComponent.render(route.page);
     }
 }

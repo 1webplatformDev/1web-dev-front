@@ -3,10 +3,12 @@ import { NavItemType } from "@shared/ui/Nav/types/NavItemType";
 import "@/shared/ui/Nav/assest/nav.css";
 
 export class NavComponent implements NavType {  
+    name: string;
     navItemType: NavItemType[]
 
     constructor (navItemType: NavItemType[]){
         this.navItemType = navItemType;
+        this.name = "NavComponent";
     }
 
     render() {
