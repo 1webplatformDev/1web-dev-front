@@ -1,4 +1,14 @@
 .nav {
     display: flex;
-    padding-top: 10px;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--color);
+    padding-right: 7px;
+    font-size: 19px;
+}
+
+.nav-link:hover {
+    text-decoration: none;    
 }

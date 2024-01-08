@@ -2,7 +2,8 @@ import { NavComponent } from "@shared/ui/Nav/index"
 import { PageType } from "@shared/types/index"
 import { listItemNav } from "@widgets/LayoutMain/const/index";
 import { ContainerComponent } from "@/shared/ui/Container/index";
-import { LayoutMainType } from "./types/LayoutMainType";
+import { LayoutMainType } from "@widgets/LayoutMain/types/LayoutMainType";
+import "@widgets/LayoutMain/assets/layoutMain.css";
 
 export class LayoutMainComponent implements LayoutMainType {
     name: string;
