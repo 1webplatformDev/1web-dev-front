@@ -5,7 +5,6 @@ import { SqlGeneratorPage } from "@page/SqlGenerator/index";
 import { LayoutMainComponent } from "@/widgets/LayoutMain";
 
 const layoutMain = new LayoutMainComponent();
-// todo LayoutMain каждый раз перерисосывается
 new Router(
     [
         new Route("/", new HomePage(), layoutMain),
