@@ -1,1 +1,3 @@
-console.log(2);
+import { routerService } from "./Router/RouterService";
+
+routerService;
