@@ -1,0 +1,25 @@
+:root {
+    --ColorBgMain: #353434;
+    --ColorDisabledBg: #ccc;
+    
+    --ColorError: #F10909;
+    --ColorOk: #38920D;
+    --ColorMain: #fff;
+    --ColorBackMain: #353434;
+    --ColorBorder: #555555;
+    --ColorLinkActive: #ccc;
+    --ColorPlacholder: #a8a8a8;
+
+    --FontSizeMain: 14px;
+    --BorderRadius: 4px;
+
+    --header-height: 30px;
+
+    --marginNav: 0 15px;
+    --gapNav: 10px;
+}
+
+body {
+    font-size: var(--FontSizeMain);
+    background-color: var(--ColorBgMain);
+}

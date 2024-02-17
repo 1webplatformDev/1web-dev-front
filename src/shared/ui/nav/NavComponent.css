@@ -1,0 +1,7 @@
+.nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: var(--marginNav);
+    gap: var(--gapNav);
+}

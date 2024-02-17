@@ -1,0 +1,5 @@
+.header {
+    height: var(--header-height);
+    border: 1px solid var(--ColorBorder);
+    border-radius: var(--BorderRadius);
+}

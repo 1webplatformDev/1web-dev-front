@@ -1,5 +1,3 @@
-import { error404Page } from "@/page/error404Page";
-
 export class RouteModel {
     readonly name: string;
     readonly url: string;
@@ -11,11 +9,3 @@ export class RouteModel {
         this.callback = callback;
     }
 }
-
-export const Route = [
-    new RouteModel(
-        "Главная",
-        "/",
-        error404Page
-    )
-]

@@ -1,4 +1,5 @@
-import { Route, RouteModel } from "./RouteModel";
+import { Route } from "@/shared/const/Route";
+import { RouteModel } from "./RouteModel";
 
 class RouterService {
     readonly routeModel: RouteModel[]

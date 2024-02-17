@@ -1,0 +1,10 @@
+.link {
+    color: var(--ColorMain);
+    text-decoration: none;
+    transition: 0.4s all;
+}
+
+.link:hover {
+    color: var(--ColorLinkActive);
+    text-decoration: underline;
+}
