@@ -10,7 +10,7 @@ export const Route = [
     ),
     new RouteModel(
         "Главная SQL",
-        "/sql",
+        "/sql-generator",
         indexSqlPage
     ),
     new RouteModel(

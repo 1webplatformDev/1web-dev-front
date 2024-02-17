@@ -4,7 +4,7 @@
     transition: 0.4s all;
 }
 
-.link:hover {
+.link:hover, .link.active {
     color: var(--ColorLinkActive);
     text-decoration: underline;
 }
